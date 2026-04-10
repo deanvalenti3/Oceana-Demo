@@ -789,8 +789,6 @@ a { color: inherit; text-decoration: none; }
 .crew__grid--full {
   grid-template-columns: repeat(2, 1fr);
   gap: 48px;
-  max-width: 900px;
-  margin: 0 auto;
 }
 
 .crew-card { text-align: center; }
@@ -808,9 +806,14 @@ a { color: inherit; text-decoration: none; }
 
 .crew-card__top {
   display: grid;
-  grid-template-columns: 240px 1fr;
-  gap: 36px;
+  grid-template-columns: 200px 1fr;
+  gap: 32px;
   align-items: start;
+}
+
+/* Prevent identity column from overflowing its grid track */
+.crew-card__top > * {
+  min-width: 0;
 }
 
 .crew-card__img-wrap {
@@ -866,9 +869,9 @@ a { color: inherit; text-decoration: none; }
 }
 
 .crew-card__role {
-  font-size: 10px;
+  font-size: 13px;
   font-weight: 700;
-  letter-spacing: 0.16em;
+  letter-spacing: 0.14em;
   text-transform: uppercase;
   color: var(--gold);
   margin-bottom: 6px;
@@ -2331,12 +2334,12 @@ a { color: inherit; text-decoration: none; }
 
   .crew__grid { grid-template-columns: repeat(2, 1fr); }
 
-  .crew__grid--full { grid-template-columns: 1fr; max-width: 600px; }
+  .crew__grid--full { grid-template-columns: 1fr; }
 
   .crew-card--full { padding: 28px; }
   .crew-card__top {
-    grid-template-columns: 200px 1fr;
-    gap: 28px;
+    grid-template-columns: 180px 1fr;
+    gap: 24px;
   }
 
   .itinerary__days { grid-template-columns: repeat(2, 1fr); }
