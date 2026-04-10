@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gallery — M/Y Oceana, Southeast Alaska</title>
+  <meta name="description" content="Photos from M/Y Oceana — the vessel, onboard life, Southeast Alaska wilderness, and the crew. Private expedition yacht based in Juneau, Alaska.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .gallery-section { padding: 64px 0; }
+    .gallery-section + .gallery-section { padding-top: 0; }
+    .gallery-section__label {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .gallery-section__title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      color: var(--navy);
+      margin: 0 0 28px;
+    }
+    .gallery-grid {
+      display: grid;
+      gap: 6px;
+    }
+    .gallery-grid--2col { grid-template-columns: 1fr 1fr; }
+    .gallery-grid--3col { grid-template-columns: 2fr 1fr 1fr; }
+    .gallery-grid--4col { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .gallery-img-wrap {
+      position: relative;
+      overflow: hidden;
+      background: var(--gray-light);
+    }
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-img-wrap:hover img { transform: scale(1.03); }
+    .gallery-img-wrap__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 16px 14px;
+      background: linear-gradient(transparent, rgba(10,27,57,0.65));
+      color: rgba(255,255,255,0.9);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-img-wrap:hover .gallery-img-wrap__caption { opacity: 1; }
+    @media (max-width: 768px) {
+      .gallery-grid--2col,
+      .gallery-grid--3col,
+      .gallery-grid--4col { grid-template-columns: 1fr 1fr; }
+      .gallery-grid--3col .gallery-img-wrap:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid--2col,
+      .gallery-grid--3col,
+      .gallery-grid--4col { grid-template-columns: 1fr; }
+      .gallery-grid--3col .gallery-img-wrap:first-child { grid-column: auto; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="site-nav">
+    <div class="container">
+      <div class="site-nav__inner">
+        <a href="index.html" class="site-nav__logo">M/Y <span>Oceana</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="site-nav__links">
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="itinerary.html">Itinerary</a></li>
+          <li><a href="crew.html">Crew</a></li>
+          <li><a href="gallery.html" class="active">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html">FAQ</a></li>
+        </ul>
+        <a href="contact.html" class="site-nav__cta btn-primary">Check Availability</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--short" style="--bg: url('../assets/images/oceana_imgs/hero.webp');">
+    <div class="container">
+      <div class="page-hero__content">
+        <div class="page-hero__eyebrow">Southeast Alaska · Inside Passage</div>
+        <h1 class="page-hero__headline">M/Y Oceana — In the Wild</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTIONS -->
+  <div style="background: var(--white); padding-bottom: 80px;">
+
+    <!-- The Vessel -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section__label">The Vessel</div>
+        <div class="gallery-section__title">M/Y Oceana</div>
+        <div class="gallery-grid gallery-grid--2col">
+          <div class="gallery-img-wrap" style="height: 480px;">
+            <img src="../assets/images/oceana_imgs/hero.webp" alt="M/Y Oceana at anchor, Southeast Alaska" loading="lazy">
+            <div class="gallery-img-wrap__caption">M/Y Oceana · At Anchor · Inside Passage</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 480px;">
+            <img src="../assets/images/oceana_imgs/1.webp" alt="M/Y Oceana main salon interior" loading="lazy">
+            <div class="gallery-img-wrap__caption">Main Salon · Life Aboard</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Alaska Wilderness -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section__label">Alaska Wilderness</div>
+        <div class="gallery-section__title">Southeast Alaska · Inside Passage</div>
+        <div class="gallery-grid gallery-grid--3col">
+          <div class="gallery-img-wrap" style="height: 520px;">
+            <img src="../assets/images/oceana_imgs/2.webp" alt="Guests kayaking at a tidewater glacier" loading="lazy" style="object-position: center 40%;">
+            <div class="gallery-img-wrap__caption">Holkham Bay · Tidewater Glacier · Kayaking</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 520px;">
+            <img src="../assets/images/oceana_imgs/3.webp" alt="Guests on bow deck photographing glaciers" loading="lazy">
+            <div class="gallery-img-wrap__caption">Bow Deck · Glacier Approach</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 520px;">
+            <img src="../assets/images/oceana_imgs/hero.webp" alt="M/Y Oceana at sunset" loading="lazy" style="object-position: center 70%;">
+            <div class="gallery-img-wrap__caption">Inside Passage · Evening Anchor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- The Crew -->
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section__label">The Crew</div>
+        <div class="gallery-section__title">Four People. One Goal.</div>
+        <div class="gallery-grid gallery-grid--4col">
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="../assets/images/oceana_imgs/michael.webp" alt="Captain Michael Grauso" loading="lazy" style="object-position: left center;">
+            <div class="gallery-img-wrap__caption">Captain Michael Grauso</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <!-- CONFIRM WITH CLIENT: Chef's jacket reads "ARIANE" — verify if full name is Ariane Briens -->
+            <img src="../assets/images/oceana_imgs/chef_ari.webp" alt="Chef Ari Briens" loading="lazy">
+            <div class="gallery-img-wrap__caption">Chef Ari Briens</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="../assets/images/oceana_imgs/first_mate_dom.webp" alt="First Mate Dom Pisano" loading="lazy">
+            <div class="gallery-img-wrap__caption">First Mate Dom Pisano</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="../assets/images/oceana_imgs/stewardess_lysanne.webp" alt="Stewardess Lysanne" loading="lazy">
+            <div class="gallery-img-wrap__caption">Stewardess Lysanne</div>
+          </div>
+        </div>
+        <p style="margin-top: 16px; font-size: 14px; color: var(--gray-mid);">
+          <a href="crew.html" style="color: var(--navy); text-decoration: underline; text-underline-offset: 3px;">Read about each crew member →</a>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <section style="padding: 80px 0; background: var(--navy); text-align: center;">
+    <div class="container">
+      <div class="section-label" style="color: var(--gold);">2026 Season</div>
+      <h2 style="font-family: var(--font-serif); font-size: clamp(26px, 3.5vw, 38px); color: var(--white); margin: 12px 0 20px;">See It for Yourself</h2>
+      <p style="max-width: 500px; margin: 0 auto 36px; color: rgba(255,255,255,0.7); font-size: 17px; line-height: 1.65;">
+        Photos capture a fraction of it. If any of this looks like the kind of trip you'd want to take, let's talk dates.
+      </p>
+      <a href="contact.html" class="btn-primary">Check Availability</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-name">M/Y <span>Oceana</span></div>
+          <p class="footer__tagline">Private yacht charter and expedition services through Southeast Alaska's Inside Passage. Juneau-based. Fully all-inclusive.</p>
+          <div class="footer__uscg">✦ &nbsp;USCG Licensed · Insured · Permitted</div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links">
+            <li><a href="experience.html">The Experience</a></li>
+            <li><a href="itinerary.html">Route &amp; Itinerary</a></li>
+            <li><a href="crew.html">Meet the Crew</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <ul class="footer__links">
+            <li><a href="mailto:info@oceanayachtcharter.com">info@oceanayachtcharter.com</a></li>
+            <li><a href="tel:+19075550199">(907) 555-0199</a></li>
+            <li><a href="contact.html">Check Availability</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 M/Y Oceana — Dorsal Ventures LLC. Juneau, Alaska.</div>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

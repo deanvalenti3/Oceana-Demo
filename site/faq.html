@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ — M/Y Oceana, Southeast Alaska</title>
+  <meta name="description" content="Frequently asked questions about M/Y Oceana private expeditions. What's included, how to book, what to bring, dietary needs, and more.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <style>
+    .faq-group { margin-bottom: 56px; }
+    .faq-group__title {
+      font-family: var(--font-serif);
+      font-size: 24px;
+      color: var(--navy);
+      margin: 0 0 24px;
+      padding-bottom: 16px;
+      border-bottom: 2px solid var(--gold);
+      display: inline-block;
+    }
+    .faq-item {
+      border-bottom: 1px solid rgba(0,0,0,0.08);
+    }
+    .faq-item summary {
+      list-style: none;
+      cursor: pointer;
+      padding: 22px 48px 22px 0;
+      font-size: 16px;
+      font-weight: 500;
+      color: var(--navy);
+      position: relative;
+      user-select: none;
+    }
+    .faq-item summary::-webkit-details-marker { display: none; }
+    .faq-item summary::after {
+      content: '+';
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 22px;
+      color: var(--gold);
+      font-weight: 300;
+      line-height: 1;
+      transition: transform 0.2s ease;
+    }
+    .faq-item[open] summary::after {
+      transform: translateY(-50%) rotate(45deg);
+    }
+    .faq-item summary:hover { color: var(--gold); }
+    .faq-item__body {
+      padding: 4px 48px 24px 0;
+      color: var(--gray-mid);
+      line-height: 1.75;
+      font-size: 15px;
+    }
+    .faq-item__body p { margin: 0 0 12px; }
+    .faq-item__body p:last-child { margin-bottom: 0; }
+    .faq-item__body a { color: var(--navy); text-decoration: underline; text-underline-offset: 3px; }
+  </style>
+</head>
+<body>
+
+  <!-- NAV -->
+  <nav class="site-nav" id="site-nav">
+    <div class="container">
+      <div class="site-nav__inner">
+        <a href="index.html" class="site-nav__logo">M/Y <span>Oceana</span></a>
+        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+        <ul class="site-nav__links">
+          <li><a href="experience.html">Experience</a></li>
+          <li><a href="itinerary.html">Itinerary</a></li>
+          <li><a href="crew.html">Crew</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="faq.html" class="active">FAQ</a></li>
+        </ul>
+        <a href="contact.html" class="site-nav__cta btn-primary">Check Availability</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO (navy bar, no image) -->
+  <section style="background: var(--navy); padding: calc(var(--nav-height) + 48px) 0 56px;">
+    <div class="container">
+      <div style="max-width: 680px;">
+        <div style="font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 14px;">Common Questions</div>
+        <h1 style="font-family: var(--font-serif); font-size: clamp(32px, 5vw, 52px); color: var(--white); margin: 0 0 16px; line-height: 1.1;">Frequently Asked Questions</h1>
+        <p style="color: rgba(255,255,255,0.7); font-size: 17px; line-height: 1.65; margin: 0;">Can't find your answer here? <a href="contact.html" style="color: var(--gold); text-decoration: underline; text-underline-offset: 3px;">Send us a message</a> — we respond within 24 hours.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ CONTENT -->
+  <section style="padding: 72px 0 80px; background: var(--white);">
+    <div class="container">
+      <div style="max-width: 760px; margin: 0 auto;">
+
+        <!-- Group 1: The Trip -->
+        <div class="faq-group">
+          <div class="faq-group__title">The Trip</div>
+
+          <details class="faq-item">
+            <summary>What exactly is included in the all-inclusive price?</summary>
+            <div class="faq-item__body">
+              <p>Everything aboard is included: all meals, snacks, and beverages (beer, wine, spirits, non-alcoholic), fishing gear and tackle, Alaska sport fishing licenses, kayaks and paddleboards, tender transport, all fuel, moorage fees, and the full crew. No hidden bills at the end of the trip.</p>
+              <p>The only typical out-of-pocket cost is getting yourself to and from Juneau, Alaska, and any crew gratuity if your group chooses to leave one.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How many guests can the boat accommodate?</summary>
+            <div class="faq-item__body">
+              <p>Up to 6 guests. The vessel is chartered exclusively to your group — no other guests, no shared common areas with strangers. If your group is smaller, the pricing structure is the same; you're still booking the whole boat.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What activities are available during the trip?</summary>
+            <div class="faq-item__body">
+              <p>Sport fishing for halibut, king and silver salmon, lingcod, and rockfish. Kayaking and paddleboarding — including glacier approaches and tidal cove exploration. Wildlife viewing: humpback and orca whales, brown and black bears, bald eagles, sea otters, and Sitka black-tailed deer. Hiking shoreline trails. Photography.</p>
+              <p>Every day is built around what guests want to do. There's no mandatory schedule.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the fishing experience like? Do I need prior experience?</summary>
+            <div class="faq-item__body">
+              <p>No prior fishing experience is required. First Mate Dom handles all gear rigging, bait, and technique instruction. He's worked with complete beginners and serious anglers and adjusts his approach accordingly.</p>
+              <p>Southeast Alaska halibut fishing is typically productive — the fish are there. What you catch gets cleaned and prepared by Chef Ari for dinner that evening.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>When is the best time to visit Southeast Alaska?</summary>
+            <div class="faq-item__body">
+              <p>The Oceana season runs June through September. June and July offer the longest daylight hours — up to 18 hours of light per day — and the best king salmon fishing. August is peak for silver salmon, wildlife activity, and bear sightings as fish stack in streams. September is quieter, with fall colors starting and excellent fishing still running.</p>
+              <p>All season windows have distinct advantages. Let us know what matters most to your group and we'll help you pick the right window.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can the itinerary be customized?</summary>
+            <div class="faq-item__body">
+              <p>Yes, within reason. The published route is a proven framework that covers the best of what Southeast Alaska offers. But if your group is primarily focused on fishing, the captain will spend more time on productive grounds. If wildlife photography is the priority, the route adjusts accordingly.</p>
+              <p>What can't be customized is weather. Captain Michael monitors conditions closely and makes routing decisions that prioritize both safety and the quality of your experience.</p>
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Group 2: Booking -->
+        <div class="faq-group">
+          <div class="faq-group__title">Booking</div>
+
+          <details class="faq-item">
+            <summary>How do I check availability and reserve dates?</summary>
+            <div class="faq-item__body">
+              <p>Fill out the short inquiry form on the <a href="contact.html">Check Availability page</a> or email <a href="mailto:info@oceanayachtcharter.com">info@oceanayachtcharter.com</a> directly. We'll respond within 24 hours with available dates, any questions we have, and next steps if you'd like to proceed.</p>
+              <p>No deposit or commitment is required to inquire.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>How far in advance should I book?</summary>
+            <div class="faq-item__body">
+              <p>As early as possible. We run a limited number of charters per season — typically four to six. Prime dates in July and August tend to fill first. For 2026 season dates, many weeks are still available as of early 2026, but that changes quickly once planning season picks up in spring.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the pricing structure?</summary>
+            <div class="faq-item__body">
+              <p>Charter rate is from $65,000 for up to 6 guests for the full 8-day expedition. This covers the entire vessel and all-inclusive costs as described above. The rate does not scale down for smaller groups — you're booking the boat, not a per-person berth.</p>
+              <p>For context, that works out to approximately $1,547 per person per night at 6 guests — comparable to high-end Alaska lodge pricing, but with the vessel, the mobility, and a crew-to-guest ratio most lodges can't match.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What is the cancellation policy?</summary>
+            <div class="faq-item__body">
+              <p>Cancellation terms are provided in full when you receive a booking agreement. We'll walk you through them clearly before any deposit is made. If you have specific questions about cancellation terms before inquiring, include them in your message and we'll address them directly.</p>
+            </div>
+          </details>
+
+        </div>
+
+        <!-- Group 3: Practical -->
+        <div class="faq-group">
+          <div class="faq-group__title">Practical Details</div>
+
+          <details class="faq-item">
+            <summary>How do I get to Juneau?</summary>
+            <div class="faq-item__body">
+              <p>Juneau is served by Alaska Airlines with direct and connecting flights from Seattle, Anchorage, and other Pacific Northwest hubs. There's no road into Juneau — it's accessible only by air or sea. Most guests fly in the day before departure to avoid any risk from flight delays.</p>
+              <p>Once you're in Juneau, we handle transport to and from the vessel.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Can you accommodate dietary restrictions?</summary>
+            <div class="faq-item__body">
+              <p>Yes. Chef Ari handles dietary restrictions routinely — vegetarian, vegan, gluten-free, allergies, strong dislikes. Communicate your group's needs when you inquire and they'll be confirmed before you board. There are no surprises at the table.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>What should I pack?</summary>
+            <div class="faq-item__body">
+              <p>Weather in Southeast Alaska is variable. The essentials: waterproof rain gear (pants and jacket), rubber boots or deck boots, warm mid-layers, and sun protection for bluebird days. Casual clothing for evenings aboard. No formal attire needed.</p>
+              <p>We'll send a full packing list when you book. It's shorter than you'd expect — the vessel provides most equipment.</p>
+            </div>
+          </details>
+
+          <details class="faq-item">
+            <summary>Is the trip suitable for non-fishers or non-hikers?</summary>
+            <div class="faq-item__body">
+              <p>Yes. Some of the best charter groups we've had included guests who had no interest in fishing and spent their time kayaking, photographing wildlife, reading on the back deck, and eating. The vessel doesn't require everyone to share the same agenda.</p>
+              <p>The trip works for mixed groups — couples where one person is primarily there for the fishing and the other is there for the scenery. There's enough variety in the eight days for everyone to have a full trip.</p>
+            </div>
+          </details>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- BOTTOM CTA -->
+  <section style="padding: 72px 0; background: var(--cream); text-align: center;">
+    <div class="container">
+      <div class="section-label">Still Have Questions?</div>
+      <h2 style="font-family: var(--font-serif); font-size: clamp(24px, 3.5vw, 36px); margin: 12px 0 20px; color: var(--navy);">Start the Conversation</h2>
+      <p style="max-width: 480px; margin: 0 auto 36px; color: var(--gray-mid); font-size: 17px; line-height: 1.65;">
+        No question is too specific. No commitment required to reach out. We respond within 24 hours.
+      </p>
+      <a href="contact.html" class="btn-primary">Check Availability &amp; Ask Anything</a>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer__top">
+        <div>
+          <div class="footer__brand-name">M/Y <span>Oceana</span></div>
+          <p class="footer__tagline">Private yacht charter and expedition services through Southeast Alaska's Inside Passage. Juneau-based. Fully all-inclusive.</p>
+          <div class="footer__uscg">✦ &nbsp;USCG Licensed · Insured · Permitted</div>
+        </div>
+        <div>
+          <div class="footer__col-title">Explore</div>
+          <ul class="footer__links">
+            <li><a href="experience.html">The Experience</a></li>
+            <li><a href="itinerary.html">Route &amp; Itinerary</a></li>
+            <li><a href="crew.html">Meet the Crew</a></li>
+            <li><a href="gallery.html">Gallery</a></li>
+            <li><a href="about.html">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <div class="footer__col-title">Contact</div>
+          <ul class="footer__links">
+            <li><a href="mailto:info@oceanayachtcharter.com">info@oceanayachtcharter.com</a></li>
+            <li><a href="tel:+19075550199">(907) 555-0199</a></li>
+            <li><a href="contact.html">Check Availability</a></li>
+            <li><a href="faq.html">FAQ</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer__bottom">
+        <div class="footer__copy">© 2026 M/Y Oceana — Dorsal Ventures LLC. Juneau, Alaska.</div>
+        <div class="footer__legal">
+          <a href="#">Privacy</a>
+          <a href="#">Terms</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
