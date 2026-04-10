@@ -19,6 +19,7 @@
   --gray-mid:   #8A8A8A;
   --text-body:  #2C2C2C;
   --serif:      'Playfair Display', Georgia, serif;
+  --accent:     'Cormorant Garamond', Georgia, serif;
   --sans:       'Inter', system-ui, sans-serif;
   --nav-height: 72px;
 }
@@ -258,7 +259,9 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 16px;
 }
 .page-hero__headline em {
+  font-family: var(--accent);
   font-style: italic;
+  font-weight: 600;
   color: var(--gold-light);
 }
 
@@ -326,7 +329,9 @@ a { color: inherit; text-decoration: none; }
   margin-bottom: 24px;
 }
 .hero__headline em {
+  font-family: var(--accent);
   font-style: italic;
+  font-weight: 600;
   color: var(--gold-light);
 }
 
@@ -1091,6 +1096,21 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: 0.1em;
   text-transform: uppercase;
   color: var(--gray-mid);
+}
+
+/* ============================================
+   TESTIMONIALS PLACEHOLDER
+============================================ */
+.testimonials__placeholder {
+  text-align: center;
+  padding: 48px 0 16px;
+}
+
+.testimonials__placeholder-text {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--gray-mid);
+  letter-spacing: 0.04em;
 }
 
 /* ============================================
@@ -2384,9 +2404,21 @@ a { color: inherit; text-decoration: none; }
   .proof-item { border-right: none; border-bottom: 1px solid rgba(0,0,0,0.08); }
   .proof-item:last-child { border-bottom: none; }
 
+  /* Homepage crew grid: 2-up on small screens */
   .crew__grid { grid-template-columns: 1fr 1fr; }
+
+  /* Crew page full-bio grid: must override .crew__grid above — single column only */
+  .crew__grid--full {
+    grid-template-columns: 1fr;
+    max-width: 100%;
+  }
+
+  /* Crew card internals: stack image above identity */
   .crew-card__top { grid-template-columns: 1fr; }
   .crew-card__img-wrap { aspect-ratio: 4/3; max-height: 320px; width: 100%; }
+
+  /* Crew card: reduce padding symmetrically, prevent edge touching */
+  .crew-card--full { padding: 20px; }
 
   .itinerary__days { grid-template-columns: 1fr; }
 
@@ -2408,4 +2440,27 @@ a { color: inherit; text-decoration: none; }
   .crew__trust-bar { gap: 20px; flex-direction: column; align-items: flex-start; }
 
   .page-hero__headline { font-size: clamp(28px, 8vw, 44px); }
+}
+
+/* ============================================
+   CREW PAGE — MOBILE HERO (scoped, crew.html only)
+============================================ */
+@media (max-width: 640px) {
+  /* Center the content block against the centered background image */
+  .page-hero--crew .page-hero__content {
+    text-align: center;
+    padding: 32px 0;
+    margin: 0 auto;
+  }
+
+  /* Eyebrow uses display:flex — center it to match */
+  .page-hero--crew .page-hero__eyebrow {
+    justify-content: center;
+  }
+
+  /* Ensure background crops from the top on short viewports */
+  .page-hero--crew {
+    background-position: center top;
+    min-height: 42vh;
+  }
 }
