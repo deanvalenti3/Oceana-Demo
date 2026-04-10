@@ -2443,6 +2443,19 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ============================================
+   CREW PAGE — MOBILE TRUST BAR (scoped, crew.html only)
+============================================ */
+@media (max-width: 640px) {
+  .crew-trust-bar {
+    flex-direction: column;
+    gap: 28px;
+  }
+  .crew-trust-bar__sep {
+    display: none;
+  }
+}
+
+/* ============================================
    CREW PAGE — MOBILE HERO (scoped, crew.html only)
 ============================================ */
 @media (max-width: 640px) {
