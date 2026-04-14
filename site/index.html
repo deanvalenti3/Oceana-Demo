@@ -317,7 +317,7 @@
         <div class="section-label">2026 Season</div>
         <h2 class="availability__headline">Limited Dates Available</h2>
         <p class="availability__sub">
-          Oceana runs <strong>5 expeditions</strong> in 2026. One is already booked. The remaining dates fill in order of inquiry, not deposit.
+          Oceana runs <strong>6 expeditions</strong> in 2026. One is already booked. The remaining dates fill in order of inquiry, not deposit.
         </p>
       </div>
 
@@ -464,7 +464,7 @@
           <h2>Reserve Your 2026 Expedition</h2>
           <p>
             Availability is limited to a handful of charters per season. Fill out the short form and we'll respond within 24 hours with date options, full itinerary details, and answers to any questions.<br><br>
-            No commitment required to inquire.
+            No commitment required to inquire. Have questions first? <a href="faq.html" style="color: var(--navy);">Browse common questions.</a>
           </p>
           <div class="inquiry__contact">
             <div class="inquiry__contact-item">
@@ -493,35 +493,43 @@
             </div>
           </div>
 
-          <div class="objections">
-            <div class="objection-block">
-              <div class="objection-block__q">Is $65,000 worth it?</div>
-              <p class="objection-block__a">For six guests that's roughly $10,800 per person. Eight days all-inclusive: private vessel, professional chef, full crew, all activities, all meals. A comparable week at a luxury Alaska lodge runs similar rates without the privacy, the access, or the experience.</p>
-            </div>
-            <div class="objection-block">
-              <div class="objection-block__q">We've never chartered a yacht before.</div>
-              <p class="objection-block__a">Most guests haven't. The crew handles everything from day one. There's nothing you need to know or prepare. Michael and Dom walk you through what to expect before you leave the dock.</p>
-            </div>
-            <div class="objection-block">
-              <div class="objection-block__q">What if the weather turns?</div>
-              <p class="objection-block__a">Southeast Alaska weather is variable. That's not a secret. Michael has run these waters for over a decade. The route has flexibility built in. Anchorages shift, plans adapt. You're on a vessel built for these conditions with a captain who knows when to move and when to wait.</p>
-            </div>
-          </div>
         </div>
 
         <div class="inquiry__form">
           <!-- Progress indicator -->
           <div class="form-progress">
             <div class="form-progress__track">
-              <div class="form-progress__fill" id="form-progress-fill" style="width: 33.33%"></div>
+              <div class="form-progress__fill" id="form-progress-fill" style="width: 25%"></div>
             </div>
-            <div class="form-progress__label" id="form-progress-label">Step 1 of 3</div>
+            <div class="form-progress__label" id="form-progress-label">Step 1 of 4</div>
           </div>
 
           <form action="#" method="post" name="inquiry-form" id="inquiry-form">
 
-            <!-- Step 1: When & Who -->
+            <!-- Step 1: Timeline / Intent -->
             <div class="form-step is-active" data-step="1">
+              <div class="form-step__heading">When are you ideally looking to plan your trip?</div>
+              <div class="intent-options">
+                <label class="intent-option">
+                  <input type="radio" name="trip_timeline" value="this-season">
+                  <span class="intent-option__label">This season</span>
+                </label>
+                <label class="intent-option">
+                  <input type="radio" name="trip_timeline" value="next-season">
+                  <span class="intent-option__label">Next season</span>
+                </label>
+                <label class="intent-option">
+                  <input type="radio" name="trip_timeline" value="just-exploring">
+                  <span class="intent-option__label">Just exploring for now</span>
+                </label>
+              </div>
+              <div class="form-step-nav">
+                <button type="button" class="btn-step-next" data-next="2">Continue →</button>
+              </div>
+            </div>
+
+            <!-- Step 2: When & Who -->
+            <div class="form-step" data-step="2">
               <div class="form-step__heading">When would you like to go?</div>
               <div class="form-row">
                 <div class="form-group">
@@ -552,13 +560,14 @@
                 <label for="email">Email Address <span class="form-label-note">(so we can get back to you)</span></label>
                 <input type="email" id="email" name="email" placeholder="jane@example.com" required>
               </div>
-              <div class="form-step-nav">
-                <button type="button" class="btn-step-next" data-next="2">Continue →</button>
+              <div class="form-step-nav form-step-nav--split">
+                <button type="button" class="btn-step-back" data-prev="1">← Back</button>
+                <button type="button" class="btn-step-next" data-next="3">Continue →</button>
               </div>
             </div>
 
-            <!-- Step 2: About You -->
-            <div class="form-step" data-step="2">
+            <!-- Step 3: About You -->
+            <div class="form-step" data-step="3">
               <div class="form-step__heading">A little more about yourself.</div>
               <div class="form-row">
                 <div class="form-group">
@@ -575,20 +584,20 @@
                 <input type="tel" id="phone" name="phone" placeholder="+1 (555) 000-0000">
               </div>
               <div class="form-step-nav form-step-nav--split">
-                <button type="button" class="btn-step-back" data-prev="1">← Back</button>
-                <button type="button" class="btn-step-next" data-next="3">Continue →</button>
+                <button type="button" class="btn-step-back" data-prev="2">← Back</button>
+                <button type="button" class="btn-step-next" data-next="4">Continue →</button>
               </div>
             </div>
 
-            <!-- Step 3: Final -->
-            <div class="form-step" data-step="3">
+            <!-- Step 4: Final -->
+            <div class="form-step" data-step="4">
               <div class="form-step__heading">Almost there.</div>
               <div class="form-group">
                 <label for="message">Anything we should know? (Optional)</label>
                 <textarea id="message" name="message" placeholder="Dietary needs, special occasions, specific fishing interests..."></textarea>
               </div>
               <div class="form-step-nav form-step-nav--back-only">
-                <button type="button" class="btn-step-back" data-prev="2">← Back</button>
+                <button type="button" class="btn-step-back" data-prev="3">← Back</button>
               </div>
               <button type="submit" class="form-submit">Request Availability</button>
               <p class="form-reassurance">We respond within 24 hours. No commitment required.</p>
@@ -619,6 +628,25 @@
         </div>
 
       </div>
+
+      <div class="objections-wrap">
+        <div class="section-label" style="margin-bottom: 28px;">Common Questions</div>
+        <div class="objections">
+          <div class="objection-block">
+            <div class="objection-block__q">Is $65,000 worth it?</div>
+            <p class="objection-block__a">For six guests that's roughly $10,800 per person. Eight days all-inclusive: private vessel, professional chef, full crew, all activities, all meals. A comparable week at a luxury Alaska lodge runs similar rates without the privacy, the access, or the experience.</p>
+          </div>
+          <div class="objection-block">
+            <div class="objection-block__q">What if we've never chartered a yacht before?</div>
+            <p class="objection-block__a">Most guests haven't. The crew handles everything from day one. There's nothing you need to know or prepare. Michael and Dom walk you through what to expect before you leave the dock.</p>
+          </div>
+          <div class="objection-block">
+            <div class="objection-block__q">What if the weather turns?</div>
+            <p class="objection-block__a">Southeast Alaska weather is variable. That's not a secret. Michael has run these waters for over a decade. The route has flexibility built in. Anchorages shift, plans adapt. You're on a vessel built for these conditions with a captain who knows when to move and when to wait.</p>
+          </div>
+        </div>
+      </div>
+
     </div>
   </section>
 

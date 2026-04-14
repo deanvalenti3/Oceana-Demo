@@ -73,7 +73,7 @@
   if (!form) return;
 
   var currentStep = 1;
-  var totalSteps = 3;
+  var totalSteps = 4;
   var progressFill = document.getElementById('form-progress-fill');
   var progressLabel = document.getElementById('form-progress-label');
 
@@ -95,8 +95,20 @@
   function validateStep(n) {
     var step = form.querySelector('[data-step="' + n + '"]');
     if (!step) return true;
-    var required = step.querySelectorAll('[required]');
     var valid = true;
+
+    // Radio group validation for intent step
+    var intentOptions = step.querySelector('.intent-options');
+    if (intentOptions) {
+      if (!step.querySelector('input[name="trip_timeline"]:checked')) {
+        intentOptions.classList.add('intent-options--error');
+        valid = false;
+      } else {
+        intentOptions.classList.remove('intent-options--error');
+      }
+    }
+
+    var required = step.querySelectorAll('[required]');
     required.forEach(function (field) {
       if (!field.value.trim()) {
         field.style.borderColor = 'rgba(180,60,60,0.6)';
@@ -124,6 +136,21 @@
   form.querySelectorAll('[data-prev]').forEach(function (btn) {
     btn.addEventListener('click', function () {
       showStep(parseInt(this.getAttribute('data-prev'), 10));
+    });
+  });
+
+  // Auto-advance on intent selection (step 1)
+  form.querySelectorAll('input[name="trip_timeline"]').forEach(function (radio) {
+    radio.addEventListener('change', function () {
+      var intentOptions = form.querySelector('.intent-options');
+      if (intentOptions) intentOptions.classList.remove('intent-options--error');
+      if (currentStep === 1) {
+        setTimeout(function () {
+          showStep(2);
+          var wrap = document.querySelector('.inquiry__form');
+          if (wrap) wrap.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        }, 150);
+      }
     });
   });
 
