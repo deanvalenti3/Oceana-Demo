@@ -504,7 +504,10 @@
             <div class="form-progress__label" id="form-progress-label">Step 1 of 4</div>
           </div>
 
-          <form action="#" method="post" name="inquiry-form" id="inquiry-form">
+          <form action="/" method="post" name="inquiry-homepage" id="inquiry-form" data-netlify="true" data-netlify-honeypot="bot-field">
+            <input type="hidden" name="form-name" value="inquiry-homepage">
+            <input type="hidden" name="source_page" value="homepage">
+            <p hidden><label>Don't fill this out: <input name="bot-field"></label></p>
 
             <!-- Step 1: Timeline / Intent -->
             <div class="form-step is-active" data-step="1">

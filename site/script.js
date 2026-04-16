@@ -34,7 +34,7 @@
 // ============================================
 (function () {
   var stickyCta = document.getElementById('sticky-cta');
-  var hero = document.querySelector('.hero');
+  var hero = document.querySelector('.hero') || document.querySelector('.page-hero');
   var inquiry = document.getElementById('inquiry');
   if (!stickyCta) return;
 
@@ -154,23 +154,38 @@
     });
   });
 
-  // Submit → show confirmation
+  // Submit → POST to Netlify, then show confirmation
   form.addEventListener('submit', function (e) {
     e.preventDefault();
     if (!validateStep(currentStep)) return;
 
-    var formWrap = document.querySelector('.inquiry__form');
-    var confirm = document.getElementById('inquiry-confirm');
-    var section = document.getElementById('inquiry');
+    var submitBtn = form.querySelector('[type="submit"]');
+    if (submitBtn) submitBtn.disabled = true;
 
-    if (formWrap) {
-      // Hide progress + form, show confirmation
-      var progress = formWrap.querySelector('.form-progress');
-      if (progress) progress.style.display = 'none';
-      form.style.display = 'none';
-      if (confirm) confirm.style.display = 'block';
-    }
+    fetch('/', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+      body: new URLSearchParams(new FormData(form)).toString()
+    })
+    .then(function () {
+      var formWrap = document.querySelector('.inquiry__form');
+      var confirm = document.getElementById('inquiry-confirm');
+      var section = document.getElementById('inquiry');
 
-    if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      if (formWrap) {
+        var progress = formWrap.querySelector('.form-progress');
+        if (progress) progress.style.display = 'none';
+        form.style.display = 'none';
+        if (confirm) confirm.style.display = 'block';
+      }
+
+      if (section) section.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    })
+    .catch(function () {
+      if (submitBtn) {
+        submitBtn.disabled = false;
+        submitBtn.textContent = 'Something went wrong — please try again or email us directly.';
+      }
+    });
   });
 }());
