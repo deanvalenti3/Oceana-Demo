@@ -46,7 +46,7 @@ exports.handler = async function (event) {
       'Preferred Dates': datesLabel,
       'Message':         data.message      || '',
       'Source Page':     data.source_page  || '',
-      'Form Name':       data['form-name'] || payload.name || '',
+      'Form Name':       data['form-name'] || '',
       'Status':          'New',
     },
   };
