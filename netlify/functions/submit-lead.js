@@ -32,9 +32,7 @@ exports.handler = async function (event) {
     'sept-6':   'Sept 6–13',
     'flexible': 'Flexible',
   };
-  const datesLabel    = DATE_LABELS[data.dates] || data.dates || '';
-  const timelineLabel = data.trip_timeline || '';
-  const dateTimeframe = [datesLabel, timelineLabel].filter(Boolean).join(' / ');
+  const datesLabel = DATE_LABELS[data.dates] || data.dates || '';
 
   // Map to Airtable schema
   const record = {
@@ -44,7 +42,8 @@ exports.handler = async function (event) {
       'Email':           data.email        || '',
       'Phone':           data.phone        || '',
       'Guest Count':     data.party_size   || '',
-      'Date / Timeframe': dateTimeframe,
+      'Trip Timeline':   data.trip_timeline || '',
+      'Preferred Dates': datesLabel,
       'Message':         data.message      || '',
       'Source Page':     data.source_page  || '',
       'Form Name':       data['form-name'] || payload.name || '',
