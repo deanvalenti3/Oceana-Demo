@@ -25,12 +25,20 @@ exports.handler = async function (event) {
 
   // Map dates select value to human-readable label
   const DATE_LABELS = {
-    'june-14':  'June 14–21',
-    'july-5':   'July 5–12',
-    'july-19':  'July 19–26',
-    'aug-2':    'Aug 2–9',
-    'sept-6':   'Sept 6–13',
-    'flexible': 'Flexible',
+    'june-1-7':        'June 1–7',
+    'june-14':         'June 14–21',
+    'june-22-28':      'June 22–28',
+    'july-1-7':        'July 1–7',
+    'july-14':         'July 14–24',
+    'july-25-31':      'July 25–31',
+    'august-1-7':      'August 1–7',
+    'aug-10':          'August 10–15',
+    'august-16-22':    'August 16–22',
+    'august-23-29':    'August 23–29',
+    'sept-5':          'September 5–12',
+    'september-13-19': 'September 13–19',
+    'september-20-26': 'September 20–26',
+    'flexible':        'Flexible / Help me choose dates',
   };
   const datesLabel = DATE_LABELS[data.dates] || data.dates || '';
 
