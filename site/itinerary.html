@@ -22,19 +22,26 @@
         </button>
         <ul class="site-nav__links">
           <li><a href="experience.html">Experience</a></li>
-          <li><a href="itinerary.html" class="active">Itinerary</a></li>
-          <li><a href="crew.html">Crew</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="yacht.html">The Yacht</a></li>
+          <li class="nav-dropdown nav-dropdown--active">
+            <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">About <span class="nav-dropdown__arrow" aria-hidden="true">▾</span></button>
+            <ul class="nav-dropdown__menu">
+              <li><a href="itinerary.html" class="active">Itinerary</a></li>
+              <li><a href="crew.html">Crew</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About Oceana</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-cta-mobile"><a href="contact.html">Plan Your Trip</a></li>
         </ul>
-        <a href="contact.html" class="site-nav__cta btn-primary">Check Availability</a>
+        <a href="contact.html" class="site-nav__cta btn-primary">Plan Your Trip</a>
       </div>
     </div>
   </nav>
 
   <!-- PAGE HERO -->
-  <section class="page-hero" style="--bg: url('assets/images/oceana_imgs/hero.webp');">
+  <section class="page-hero" style="--bg: url('assets/landscape_imgs/DJI_20250614212608_0589_D.jpg');">
     <div class="container">
       <div class="page-hero__content">
         <div class="page-hero__eyebrow">Southeast Alaska · Inside Passage</div>
@@ -196,8 +203,13 @@
 
       </div>
 
+      <!-- Scenery break -->
+      <div style="max-width: 860px; margin: 48px auto 0; border-radius: 4px; overflow: hidden;">
+        <img src="assets/landscape_imgs/DJI_20250615183729_0737_D.jpg" alt="Motor Yacht Oceana anchored in a sheltered Southeast Alaska cove with a kayaker nearby" loading="lazy" style="width: 100%; display: block; object-fit: cover; aspect-ratio: 16 / 7;">
+      </div>
+
       <!-- Flexibility note -->
-      <div style="max-width: 860px; margin: 48px auto 0; padding: 28px 32px; background: var(--cream); border-left: 3px solid var(--gold); border-radius: 2px;">
+      <div style="max-width: 860px; margin: 24px auto 0; padding: 28px 32px; background: var(--cream); border-left: 3px solid var(--gold); border-radius: 2px;">
         <p style="font-size: 15px; color: var(--gray-mid); line-height: 1.7; margin: 0;">
           <strong style="color: var(--navy);">On routing flexibility:</strong> Exact daily stops adapt to weather, tidal windows, wildlife activity, and guest preferences. The crew briefs each morning on the plan and adjusts in real time. The goal is always to put you in the best position: for fishing, wildlife, or simply finding somewhere quiet and extraordinary to anchor for the night. Questions about what's included? <a href="faq.html" style="color: var(--navy); text-decoration: underline; text-underline-offset: 3px;">Browse the FAQ.</a>
         </p>
@@ -234,6 +246,7 @@
           <div class="footer__col-title">Explore</div>
           <ul class="footer__links">
             <li><a href="experience.html">The Experience</a></li>
+            <li><a href="yacht.html">The Yacht</a></li>
             <li><a href="itinerary.html">Route &amp; Itinerary</a></li>
             <li><a href="crew.html">Meet the Crew</a></li>
             <li><a href="gallery.html">Gallery</a></li>

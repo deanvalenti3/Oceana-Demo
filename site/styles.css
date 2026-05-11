@@ -197,6 +197,87 @@ a { color: inherit; text-decoration: none; }
 .site-nav.nav-open .nav-toggle span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
 /* ============================================
+   NAV DROPDOWN
+============================================ */
+.nav-dropdown {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.nav-dropdown__trigger {
+  background: none;
+  border: none;
+  border-bottom: 1px solid transparent;
+  padding: 7px 0 3px;
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 13px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: color 0.2s, border-color 0.2s;
+  line-height: 1;
+}
+.nav-dropdown__trigger:hover,
+.nav-dropdown--active .nav-dropdown__trigger {
+  color: var(--white);
+  border-bottom-color: var(--gold);
+}
+
+.nav-dropdown__arrow {
+  font-size: 9px;
+  display: inline-block;
+  line-height: 1;
+  opacity: 0.8;
+}
+
+.nav-dropdown__menu {
+  display: none;
+  position: absolute;
+  top: calc(100% + 18px);
+  left: 50%;
+  transform: translateX(-50%);
+  min-width: 180px;
+  background: var(--navy-mid);
+  border: 1px solid rgba(201,168,76,0.22);
+  border-top: 2px solid var(--gold);
+  list-style: none;
+  padding: 6px 0;
+  z-index: 200;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.32);
+}
+.nav-dropdown:hover .nav-dropdown__menu,
+.nav-dropdown:focus-within .nav-dropdown__menu {
+  display: block;
+}
+
+.nav-dropdown__menu a {
+  display: block;
+  padding: 11px 20px;
+  font-size: 12px;
+  font-weight: 500;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: rgba(255,255,255,0.65);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  transition: color 0.15s, background 0.15s;
+}
+.nav-dropdown__menu li:last-child a { border-bottom: none; }
+.nav-dropdown__menu a:hover,
+.nav-dropdown__menu a.active {
+  color: var(--white);
+  background: rgba(255,255,255,0.06);
+}
+
+/* Mobile-only "Plan Your Trip" link inside nav list */
+.nav-cta-mobile { display: none; }
+
+/* ============================================
    PAGE HERO (inner pages)
 ============================================ */
 .page-hero {
@@ -271,6 +352,27 @@ a { color: inherit; text-decoration: none; }
   line-height: 1.65;
   color: rgba(255,255,255,0.72);
   max-width: 500px;
+}
+
+/* ============================================
+   SHARED VIDEO HERO
+   Used across homepage, yacht, experience, contact.
+   Stack: .video-hero__media (0) → .video-hero__overlay (1) → content (2+)
+============================================ */
+.video-hero__media {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  z-index: 0;
+}
+.video-hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(160deg, rgba(10,22,40,0.82) 0%, rgba(10,22,40,0.48) 55%, rgba(10,22,40,0.76) 100%);
+  z-index: 1;
 }
 
 /* ============================================
@@ -2484,6 +2586,51 @@ a { color: inherit; text-decoration: none; }
     content: '';
     display: block;
   }
+
+  /* Dropdown — mobile */
+  .nav-dropdown__trigger {
+    display: block;
+    width: 100%;
+    padding: 14px 24px;
+    font-size: 14px;
+    text-align: left;
+    border-bottom: none;
+  }
+  .nav-dropdown__arrow { display: none; }
+
+  .nav-dropdown__menu {
+    position: static;
+    transform: none;
+    box-shadow: none;
+    border: none;
+    border-top: 1px solid rgba(255,255,255,0.06);
+    background: rgba(255,255,255,0.04);
+    padding: 0;
+  }
+  .site-nav.nav-open .nav-dropdown__menu { display: block; }
+
+  .nav-dropdown__menu a {
+    padding-left: 36px;
+    font-size: 13px;
+  }
+
+  /* Plan Your Trip — mobile nav link */
+  .nav-cta-mobile {
+    display: block;
+    border-top: 1px solid rgba(201,168,76,0.2);
+    margin-top: 4px;
+  }
+  .nav-cta-mobile a {
+    display: block;
+    padding: 14px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    letter-spacing: 0.07em;
+    text-transform: uppercase;
+    color: var(--gold) !important;
+    border-bottom: none !important;
+  }
+  .nav-cta-mobile a:hover { color: var(--gold-light) !important; }
 }
 
 /* ============================================

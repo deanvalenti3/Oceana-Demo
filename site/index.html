@@ -22,13 +22,20 @@
         </button>
         <ul class="site-nav__links">
           <li><a href="experience.html">Experience</a></li>
-          <li><a href="itinerary.html">Itinerary</a></li>
-          <li><a href="crew.html">Crew</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="yacht.html">The Yacht</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">About <span class="nav-dropdown__arrow" aria-hidden="true">▾</span></button>
+            <ul class="nav-dropdown__menu">
+              <li><a href="itinerary.html">Itinerary</a></li>
+              <li><a href="crew.html">Crew</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About Oceana</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-cta-mobile"><a href="contact.html">Plan Your Trip</a></li>
         </ul>
-        <a href="#inquiry" class="site-nav__cta btn-primary">Check Availability</a>
+        <a href="#inquiry" class="site-nav__cta btn-primary">Plan Your Trip</a>
       </div>
     </div>
   </nav>
@@ -39,6 +46,19 @@
   ============================================ -->
   <section class="hero">
     <div class="hero-bg"></div>
+    <video
+      class="video-hero__media"
+      autoplay
+      muted
+      loop
+      playsinline
+      preload="metadata"
+      poster="assets/Oceana Video Media/oceana-main-montage-poster.jpg"
+      aria-hidden="true"
+    >
+      <source src="assets/Oceana Video Media/oceana_main_montage.mp4" type="video/mp4">
+    </video>
+    <div class="video-hero__overlay"></div>
     <div class="container">
       <div class="hero__content">
         <div class="hero__eyebrow">Southeast Alaska Private Charter</div>
@@ -150,7 +170,7 @@
               The only cost not included: your flights to Juneau, AK. Everything else is handled.
             </p>
           </div>
-          <img src="assets/images/oceana_imgs/1.webp" alt="Motor Yacht Oceana main salon and bar" class="offer__support-img">
+          <img src="assets/yacht_imgs/DJI_20250617145608_0949_D.jpg" alt="Motor Yacht Oceana with crew and guests on the foredeck, Southeast Alaska" loading="lazy" class="offer__support-img">
         </div>
 
       </div>
@@ -191,7 +211,7 @@
         <span class="route-stop__name is-end">Juneau</span>
       </div>
 
-      <img src="assets/images/oceana_imgs/2.webp" alt="Guests kayaking at a tidewater glacier, Southeast Alaska" class="itinerary__feature-img">
+      <img src="assets/landscape_imgs/DJI_20250616211517_0886_D.jpg" alt="Motor Yacht Oceana at sunset in a Southeast Alaska fjord, mountains and golden light" loading="lazy" class="itinerary__feature-img">
 
       <div class="itinerary__days">
         <div class="day-card">

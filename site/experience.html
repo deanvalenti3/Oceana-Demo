@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Alaska Luxury Wilderness Experience | Motor Yacht Oceana</title>
-  <meta name="description" content="Eight days aboard a private expedition yacht in Southeast Alaska. Fishing, kayaking, glaciers, wildlife, and a classically trained chef. Six guests max.">
+  <meta name="description" content="Eight days aboard a private expedition yacht in Southeast Alaska. Fishing, kayaking, glaciers, wildlife, and a classically trained chef. Up to ten guests.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -22,19 +22,26 @@
         </button>
         <ul class="site-nav__links">
           <li><a href="experience.html" class="active">Experience</a></li>
-          <li><a href="itinerary.html">Itinerary</a></li>
-          <li><a href="crew.html">Crew</a></li>
-          <li><a href="gallery.html">Gallery</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="faq.html">FAQ</a></li>
+          <li><a href="yacht.html">The Yacht</a></li>
+          <li class="nav-dropdown">
+            <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">About <span class="nav-dropdown__arrow" aria-hidden="true">▾</span></button>
+            <ul class="nav-dropdown__menu">
+              <li><a href="itinerary.html">Itinerary</a></li>
+              <li><a href="crew.html">Crew</a></li>
+              <li><a href="gallery.html">Gallery</a></li>
+              <li><a href="about.html">About Oceana</a></li>
+              <li><a href="faq.html">FAQ</a></li>
+            </ul>
+          </li>
+          <li class="nav-cta-mobile"><a href="contact.html">Plan Your Trip</a></li>
         </ul>
-        <a href="contact.html" class="site-nav__cta btn-primary">Check Availability</a>
+        <a href="contact.html" class="site-nav__cta btn-primary">Plan Your Trip</a>
       </div>
     </div>
   </nav>
 
   <!-- PAGE HERO -->
-  <section class="page-hero" style="--bg: url('assets/images/oceana_imgs/hero.webp');">
+  <section class="page-hero" style="--bg: url('assets/landscape_imgs/DJI_20250616211517_0886_D.jpg');">
     <div class="container">
       <div class="page-hero__content">
         <div class="page-hero__eyebrow">8 Days · 7 Nights · Up to 6 Guests</div>
@@ -63,7 +70,7 @@
           </p>
         </div>
         <div style="position: relative;">
-          <img src="assets/images/oceana_imgs/1.webp" alt="Motor Yacht Oceana main salon interior" style="width: 100%; border-radius: 4px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.12);">
+          <img src="assets/yacht_imgs/DJI_20250805125047_0700_D-2.jpg" alt="Motor Yacht Oceana at anchor with tender alongside in turquoise Alaska waters" loading="lazy" style="width: 100%; border-radius: 4px; display: block; box-shadow: 0 20px 60px rgba(0,0,0,0.12); object-fit: cover;">
         </div>
       </div>
     </div>
@@ -144,7 +151,7 @@
 
   <!-- GLACIER FEATURE IMAGE -->
   <section style="padding: 0; overflow: hidden; height: 480px; position: relative;">
-    <img src="assets/images/oceana_imgs/2.webp" alt="Guests kayaking at a tidewater glacier in Southeast Alaska" style="width: 100%; height: 100%; object-fit: cover; object-position: center 40%; display: block;">
+    <img src="assets/landscape_imgs/DJI_20250802144111_0496_D-2.jpg" alt="Blue glacier ice and meltwater valley, Southeast Alaska" loading="lazy" style="width: 100%; height: 100%; object-fit: cover; object-position: center 30%; display: block;">
     <div style="position: absolute; inset: 0; background: linear-gradient(to right, rgba(10,27,57,0.7) 0%, transparent 60%); display: flex; align-items: center;">
       <div class="container">
         <div style="max-width: 480px; color: var(--white);">
@@ -170,7 +177,7 @@
             The main salon is warm, well-lit, and stocked. Cabins are private and properly appointed. Not glamping, not roughing it. When the weather's right, the back deck is where everyone ends up: coffee in the morning, wine when the light goes golden.
           </p>
           <p style="color: var(--gray-mid); line-height: 1.75; margin-bottom: 24px;">
-            The vessel accommodates up to 6 guests in private staterooms. Everything is all-inclusive: all meals and beverages, fishing gear and licenses, kayak equipment, tender transport, fuel, moorage, and crew gratuity guidance.
+            The vessel accommodates up to 10 guests. Everything is all-inclusive: all meals and beverages, fishing gear and licenses, kayak equipment, tender transport, fuel, moorage, and crew gratuity guidance.
           </p>
           <div style="display: flex; flex-direction: column; gap: 12px;">
             <div style="display: flex; align-items: center; gap: 12px; font-size: 15px; color: var(--navy);">
@@ -221,7 +228,7 @@
     <div class="container">
       <div class="section-label">All-Inclusive Pricing</div>
       <h2 style="font-family: var(--font-serif); font-size: clamp(28px, 4vw, 44px); margin: 12px 0; color: var(--navy);">From $65,000</h2>
-      <p style="font-size: 16px; color: var(--gray-mid); margin-bottom: 6px;">8 days / 7 nights · Up to 6 guests · ~$1,547 per person per night</p>
+      <p style="font-size: 16px; color: var(--gray-mid); margin-bottom: 6px;">8 days / 7 nights · Up to 10 guests · ~$929 per person per night</p>
       <p style="max-width: 560px; margin: 0 auto 36px; color: var(--gray-mid); font-size: 16px; line-height: 1.65;">
         The entire vessel, all staterooms, all meals, all activities, full crew, chartered exclusively for your group. No shared spaces, no strangers, no separate bills.
       </p>
@@ -243,6 +250,7 @@
           <div class="footer__col-title">Explore</div>
           <ul class="footer__links">
             <li><a href="experience.html">The Experience</a></li>
+            <li><a href="yacht.html">The Yacht</a></li>
             <li><a href="itinerary.html">Route &amp; Itinerary</a></li>
             <li><a href="crew.html">Meet the Crew</a></li>
             <li><a href="gallery.html">Gallery</a></li>
