@@ -158,19 +158,45 @@
     .rate-table td:first-child { color: var(--navy); font-weight: 500; }
 
     /* ================================================
+       INTERIOR GALLERY
+    ================================================ */
+    .interior-gallery__grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 20px;
+    }
+    .interior-card img {
+      width: 100%;
+      aspect-ratio: 4 / 3;
+      object-fit: cover;
+      border-radius: 4px;
+      display: block;
+    }
+    .interior-card__caption {
+      font-size: 12px;
+      color: var(--gray-mid);
+      text-transform: uppercase;
+      letter-spacing: 0.08em;
+      font-weight: 500;
+      margin-top: 10px;
+    }
+
+    /* ================================================
        RESPONSIVE
     ================================================ */
     @media (max-width: 900px) {
-      .specs-grid   { grid-template-columns: repeat(2, 1fr); }
-      .spaces-grid  { grid-template-columns: 1fr 1fr; }
-      .two-col-list { grid-template-columns: 1fr; }
+      .specs-grid               { grid-template-columns: repeat(2, 1fr); }
+      .spaces-grid              { grid-template-columns: 1fr 1fr; }
+      .two-col-list             { grid-template-columns: 1fr; }
       .walkthrough-section-grid { grid-template-columns: 1fr !important; }
+      .interior-gallery__grid   { grid-template-columns: repeat(2, 1fr); }
     }
 
     @media (max-width: 640px) {
-      .specs-grid     { grid-template-columns: repeat(2, 1fr); }
-      .spaces-grid    { grid-template-columns: 1fr; }
-      .stateroom-grid { grid-template-columns: 1fr; }
+      .specs-grid               { grid-template-columns: repeat(2, 1fr); }
+      .spaces-grid              { grid-template-columns: 1fr; }
+      .stateroom-grid           { grid-template-columns: 1fr; }
+      .interior-gallery__grid   { grid-template-columns: 1fr 1fr; }
     }
   </style>
 </head>
@@ -333,6 +359,65 @@
 
       </div>
 
+    </div>
+  </section>
+
+
+  <!-- ============================================
+       4b. INTERIOR PHOTOGRAPHY
+  ============================================ -->
+  <section style="padding: 72px 0; background: var(--cream);">
+    <div class="container">
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div class="section-label">Inside the Yacht</div>
+        <h2 style="font-family: var(--font-serif); font-size: clamp(24px, 3vw, 34px); margin: 12px 0; color: var(--navy);">Accommodations &amp; Shared Spaces</h2>
+        <p style="max-width: 560px; margin: 0 auto; color: var(--gray-mid); font-size: 16px; line-height: 1.65;">A closer look at Oceana's guest staterooms and onboard living spaces.</p>
+      </div>
+      <div class="interior-gallery__grid">
+
+        <div class="interior-card">
+          <img src="assets/images/oceana_imgs/recrewbios/Screenshot%202024-12-13%20180215.png"
+               alt="Main salon lounge with blue seating and bar aboard M/Y Oceana"
+               loading="lazy">
+          <p class="interior-card__caption">Main Salon</p>
+        </div>
+
+        <div class="interior-card">
+          <img src="assets/images/oceana_imgs/recrewbios/Screenshot%202024-12-13%20180245.png"
+               alt="Forward dining area with teak table and panoramic windows aboard M/Y Oceana"
+               loading="lazy">
+          <p class="interior-card__caption">Forward Dining</p>
+        </div>
+
+        <div class="interior-card">
+          <img src="assets/images/oceana_imgs/recrewbios/Screenshot%202024-12-13%20180311.png"
+               alt="Master stateroom with queen bed and teak cabinetry aboard M/Y Oceana"
+               loading="lazy">
+          <p class="interior-card__caption">Master Stateroom</p>
+        </div>
+
+        <div class="interior-card">
+          <img src="assets/images/oceana_imgs/recrewbios/Screenshot%202024-12-13%20180427.png"
+               alt="Guest stateroom with queen bed aboard M/Y Oceana"
+               loading="lazy">
+          <p class="interior-card__caption">Guest Stateroom</p>
+        </div>
+
+        <div class="interior-card">
+          <img src="assets/images/oceana_imgs/recrewbios/Screenshot%202024-12-13%20180359.png"
+               alt="Bunk room with two single berths aboard M/Y Oceana"
+               loading="lazy">
+          <p class="interior-card__caption">Bunk Room</p>
+        </div>
+
+        <div class="interior-card">
+          <img src="assets/images/oceana_imgs/recrewbios/Screenshot%202024-12-13%20180503.png"
+               alt="Private guest head with sink and shower aboard M/Y Oceana"
+               loading="lazy">
+          <p class="interior-card__caption">Guest Head</p>
+        </div>
+
+      </div>
     </div>
   </section>
 
