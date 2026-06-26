@@ -2849,6 +2849,14 @@ a { color: inherit; text-decoration: none; }
 /* ============================================
    RESPONSIVE — 960px
 ============================================ */
+/* Inline-style two-column image+text grids — must stack on mobile */
+@media (max-width: 768px) {
+  .two-col-text-img {
+    grid-template-columns: 1fr !important;
+    gap: 40px !important;
+  }
+}
+
 @media (max-width: 960px) {
   .offer__grid,
   .vessel-intro-grid,
