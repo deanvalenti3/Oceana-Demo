@@ -1,0 +1,26 @@
+{
+  "name": "oceana",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build": "eleventy",
+    "start": "eleventy --serve --port=8081"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/deanvalenti3/Oceana-Demo.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/deanvalenti3/Oceana-Demo/issues"
+  },
+  "homepage": "https://github.com/deanvalenti3/Oceana-Demo#readme",
+  "devDependencies": {
+    "@11ty/eleventy": "^3.1.6"
+  }
+}

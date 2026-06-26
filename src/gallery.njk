@@ -1,0 +1,166 @@
+---
+layout: layout.njk
+title: Gallery — Motor Yacht Oceana, Southeast Alaska
+description: Photos from M/Y Oceana and the Inside Passage — the vessel, Alaska wilderness, and the crew.
+navActive: gallery
+permalink: gallery.html
+headExtra: |
+  <style>
+    .gallery-section { padding: 64px 0; }
+    .gallery-section + .gallery-section { padding-top: 0; }
+    .gallery-section__label {
+      font-size: 12px;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 6px;
+    }
+    .gallery-section__title {
+      font-family: var(--font-serif);
+      font-size: 26px;
+      color: var(--navy);
+      margin: 0 0 28px;
+    }
+    .gallery-grid {
+      display: grid;
+      gap: 6px;
+    }
+    .gallery-grid--2col { grid-template-columns: 1fr 1fr; }
+    .gallery-grid--3col { grid-template-columns: 2fr 1fr 1fr; }
+    .gallery-grid--4col { grid-template-columns: 1fr 1fr 1fr 1fr; }
+    .gallery-img-wrap {
+      position: relative;
+      overflow: hidden;
+      background: var(--gray-light);
+    }
+    .gallery-img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.4s ease;
+    }
+    .gallery-img-wrap:hover img { transform: scale(1.03); }
+    .gallery-img-wrap__caption {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      padding: 24px 16px 14px;
+      background: linear-gradient(transparent, rgba(10,27,57,0.65));
+      color: rgba(255,255,255,0.9);
+      font-size: 12px;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+    .gallery-img-wrap:hover .gallery-img-wrap__caption { opacity: 1; }
+    @media (max-width: 768px) {
+      .gallery-grid--2col,
+      .gallery-grid--3col,
+      .gallery-grid--4col { grid-template-columns: 1fr 1fr; }
+      .gallery-grid--3col .gallery-img-wrap:first-child { grid-column: 1 / -1; }
+    }
+    @media (max-width: 480px) {
+      .gallery-grid--2col,
+      .gallery-grid--3col,
+      .gallery-grid--4col { grid-template-columns: 1fr; }
+      .gallery-grid--3col .gallery-img-wrap:first-child { grid-column: auto; }
+    }
+  </style>
+---
+
+  <!-- PAGE HERO -->
+  <section class="page-hero page-hero--short" style="--bg: url('assets/images/oceana_imgs/hero.webp');">
+    <div class="container">
+      <div class="page-hero__content">
+        <div class="page-hero__eyebrow">Southeast Alaska · Inside Passage</div>
+        <h1 class="page-hero__headline">Motor Yacht Oceana, In the Wild</h1>
+      </div>
+    </div>
+  </section>
+
+  <!-- GALLERY SECTIONS -->
+  <div style="background: var(--white); padding-bottom: 80px;">
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section__label">The Vessel</div>
+        <h2 class="gallery-section__title">Motor Yacht Oceana</h2>
+        <div class="gallery-grid gallery-grid--2col">
+          <div class="gallery-img-wrap" style="height: 480px;">
+            <img src="assets/images/oceana_imgs/hero.webp" alt="Motor Yacht Oceana at anchor, Southeast Alaska" loading="lazy">
+            <div class="gallery-img-wrap__caption">Motor Yacht Oceana · At Anchor · Inside Passage</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 480px;">
+            <img src="assets/images/oceana_imgs/1.webp" alt="Motor Yacht Oceana main salon interior" loading="lazy">
+            <div class="gallery-img-wrap__caption">Main Salon · Life Aboard</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section__label">Alaska Wilderness</div>
+        <h2 class="gallery-section__title">Southeast Alaska · Inside Passage</h2>
+        <div class="gallery-grid gallery-grid--3col">
+          <div class="gallery-img-wrap" style="height: 520px;">
+            <img src="assets/images/oceana_imgs/2.webp" alt="Guests kayaking at a tidewater glacier" loading="lazy" style="object-position: center 40%;">
+            <div class="gallery-img-wrap__caption">Holkham Bay · Tidewater Glacier · Kayaking</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 520px;">
+            <img src="assets/images/oceana_imgs/3.webp" alt="Guests on bow deck photographing glaciers" loading="lazy">
+            <div class="gallery-img-wrap__caption">Bow Deck · Glacier Approach</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 520px;">
+            <img src="assets/images/oceana_imgs/hero.webp" alt="Motor Yacht Oceana at sunset" loading="lazy" style="object-position: center 70%;">
+            <div class="gallery-img-wrap__caption">Inside Passage · Evening Anchor</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="gallery-section">
+      <div class="container">
+        <div class="gallery-section__label">The Crew</div>
+        <h2 class="gallery-section__title">Four People. One Goal.</h2>
+        <div class="gallery-grid gallery-grid--4col">
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="assets/images/oceana_imgs/michael.webp" alt="Captain Michael Grauso, Motor Yacht Oceana, Southeast Alaska" loading="lazy" style="object-position: left center;">
+            <div class="gallery-img-wrap__caption">Captain Michael Grauso</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="assets/images/oceana_imgs/chef_ari.webp" alt="Chef Ari Briens, private chef, Motor Yacht Oceana" loading="lazy">
+            <div class="gallery-img-wrap__caption">Chef Ari Briens</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="assets/images/oceana_imgs/new_crew_imgs/first_mate_matthew.jpeg" alt="First Mate Matthew Miller, Motor Yacht Oceana" loading="lazy" style="background: #c8c4bc;">
+            <div class="gallery-img-wrap__caption">First Mate Matthew Miller</div>
+          </div>
+          <div class="gallery-img-wrap" style="height: 360px;">
+            <img src="assets/images/oceana_imgs/new_crew_imgs/stewardess_lisa.jpeg" alt="Stewardess Lisa Cincotta, Motor Yacht Oceana" loading="lazy" style="background: #c8c4bc;">
+            <div class="gallery-img-wrap__caption">Stewardess Lisa Cincotta</div>
+          </div>
+        </div>
+        <p style="margin-top: 16px; font-size: 14px; color: var(--gray-mid);">
+          <a href="crew.html" style="color: var(--navy); text-decoration: underline; text-underline-offset: 3px;">Read about each crew member →</a>
+        </p>
+      </div>
+    </section>
+
+  </div>
+
+  <!-- CTA -->
+  <section style="padding: 80px 0; background: var(--navy); text-align: center;">
+    <div class="container">
+      <div class="section-label" style="color: var(--gold);">2026 Season</div>
+      <h2 style="font-family: var(--font-serif); font-size: clamp(26px, 3.5vw, 38px); color: var(--white); margin: 12px 0 20px;">See It for Yourself</h2>
+      <p style="max-width: 500px; margin: 0 auto 36px; color: rgba(255,255,255,0.7); font-size: 17px; line-height: 1.65;">
+        Photos capture a fraction of it. If any of this looks like the kind of trip you'd want to take, let's talk dates.
+      </p>
+      <a href="contact.html" class="btn-primary">Check Availability</a>
+    </div>
+  </section>

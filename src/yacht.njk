@@ -1,14 +1,10 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>The Yacht | Motor Yacht Oceana Alaska Charter</title>
-  <meta name="description" content="M/Y Oceana is a 95' classic yacht offering a private way into Southeast Alaska. Beyond the cruise routes, closer to the water, and far from the crowds.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Cormorant+Garamond:ital,wght@1,400;1,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="styles.css">
+---
+layout: layout.njk
+title: The Yacht — Motor Yacht Oceana, 95' Classic Expedition Vessel
+description: Motor Yacht Oceana — a 95-foot classic built in 1975. Four private staterooms, main salon, galley, pilothouse. Built for Southeast Alaska.
+navActive: yacht
+permalink: yacht.html
+headExtra: |
   <style>
 
     /* ================================================
@@ -199,37 +195,7 @@
       .interior-gallery__grid   { grid-template-columns: 1fr 1fr; }
     }
   </style>
-</head>
-<body>
-
-  <!-- NAV -->
-  <nav class="site-nav" id="site-nav">
-    <div class="container">
-      <div class="site-nav__inner">
-        <a href="index.html" class="site-nav__logo">Motor Yacht <span>Oceana</span></a>
-        <button class="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
-          <span></span><span></span><span></span>
-        </button>
-        <ul class="site-nav__links">
-          <li><a href="experience.html">Experience</a></li>
-          <li><a href="yacht.html" class="active">The Yacht</a></li>
-          <li class="nav-dropdown">
-            <button class="nav-dropdown__trigger" aria-haspopup="true" aria-expanded="false">About <span class="nav-dropdown__arrow" aria-hidden="true">▾</span></button>
-            <ul class="nav-dropdown__menu">
-              <li><a href="itinerary.html">Itinerary</a></li>
-              <li><a href="crew.html">Crew</a></li>
-              <li><a href="gallery.html">Gallery</a></li>
-              <li><a href="about.html">About Oceana</a></li>
-              <li><a href="faq.html">FAQ</a></li>
-            </ul>
-          </li>
-          <li class="nav-cta-mobile"><a href="contact.html">Plan Your Trip</a></li>
-        </ul>
-        <a href="contact.html" class="site-nav__cta btn-primary">Plan Your Trip</a>
-      </div>
-    </div>
-  </nav>
-
+---
 
   <section class="page-hero page-hero--short" style="--bg: url('assets/yacht_imgs/DJI_20250805204309_0847_D-2.jpg');">
     <div class="container">
@@ -327,7 +293,7 @@
 
 
   <!-- ============================================
-       2. VESSEL OVERVIEW — Intro + existing site image
+       VESSEL OVERVIEW
   ============================================ -->
   <section style="padding: 80px 0; background: var(--white);">
     <div class="container">
@@ -354,7 +320,7 @@
 
 
   <!-- ============================================
-       3. QUICK SPECS — 8 stat cards
+       QUICK SPECS
   ============================================ -->
   <section style="padding: 72px 0; background: var(--cream);">
     <div class="container">
@@ -405,7 +371,7 @@
 
 
   <!-- ============================================
-       4. ACCOMMODATIONS — 4 stateroom cards
+       ACCOMMODATIONS
   ============================================ -->
   <section style="padding: 80px 0; background: var(--white);">
     <div class="container">
@@ -448,7 +414,7 @@
 
 
   <!-- ============================================
-       4b. INTERIOR PHOTOGRAPHY
+       INTERIOR PHOTOGRAPHY
   ============================================ -->
   <section style="padding: 72px 0; background: var(--cream);">
     <div class="container">
@@ -507,7 +473,7 @@
 
 
   <!-- ============================================
-       5. OCEANA IN HER ELEMENT
+       OCEANA IN HER ELEMENT
   ============================================ -->
   <section style="padding: 80px 0; background: var(--navy);">
     <div class="container">
@@ -543,7 +509,7 @@
 
 
   <!-- ============================================
-       6. ONBOARD SPACES — 6 space cards
+       ONBOARD SPACES
   ============================================ -->
   <section style="padding: 80px 0; background: var(--white);">
     <div class="container">
@@ -583,10 +549,8 @@
   </section>
 
 
-
-
   <!-- ============================================
-       8. TENDERS, TOYS & AMENITIES
+       TENDERS, TOYS & AMENITIES
   ============================================ -->
   <section style="padding: 80px 0; background: var(--navy);">
     <div class="container">
@@ -649,7 +613,7 @@
 
 
   <!-- ============================================
-       9. INCLUSIONS / NOT INCLUDED
+       INCLUSIONS / NOT INCLUDED
   ============================================ -->
   <section style="padding: 80px 0; background: var(--cream);">
     <div class="container">
@@ -689,7 +653,7 @@
 
 
   <!-- ============================================
-       10. RATES
+       RATES
   ============================================ -->
   <section style="padding: 80px 0; background: var(--white);">
     <div class="container">
@@ -739,7 +703,7 @@
 
 
   <!-- ============================================
-       11. CTA
+       CTA
   ============================================ -->
   <section style="padding: 80px 0; background: var(--navy); text-align: center;">
     <div class="container">
@@ -754,61 +718,3 @@
       </div>
     </div>
   </section>
-
-
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-      <div class="footer__top">
-        <div>
-          <div class="footer__brand-name">Motor Yacht <span>Oceana</span></div>
-          <p class="footer__tagline">Private yacht charter and expedition services through Southeast Alaska's Inside Passage. Juneau-based. Fully all-inclusive.</p>
-          <div class="footer__uscg">✦ &nbsp;USCG Licensed · Insured · Permitted</div>
-        </div>
-        <div>
-          <div class="footer__col-title">Explore</div>
-          <ul class="footer__links">
-            <li><a href="experience.html">The Experience</a></li>
-            <li><a href="yacht.html">The Yacht</a></li>
-            <li><a href="itinerary.html">Route &amp; Itinerary</a></li>
-            <li><a href="crew.html">Meet the Crew</a></li>
-            <li><a href="gallery.html">Gallery</a></li>
-            <li><a href="about.html">About</a></li>
-          </ul>
-        </div>
-        <div>
-          <div class="footer__col-title">Contact</div>
-          <ul class="footer__links">
-            <li><a href="mailto:myoceana1975@gmail.com">myoceana1975@gmail.com</a></li>
-            <li><a href="tel:+12016260907">201-626-0907</a></li>
-            <li><a href="contact.html">Check Availability</a></li>
-            <li><a href="faq.html">FAQ</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="footer__bottom">
-        <div class="footer__copy">© 2026 Motor Yacht Oceana, Dorsal Ventures LLC. Juneau, Alaska.</div>
-        <div class="footer__legal">
-          <a href="#">Privacy</a>
-          <a href="#">Terms</a>
-        </div>
-      </div>
-    </div>
-  </footer>
-
-  <!-- STICKY CTA BAR -->
-  <div class="sticky-cta" id="sticky-cta">
-    <div class="container">
-      <div class="sticky-cta__inner">
-        <div class="sticky-cta__text">
-          <span class="sticky-cta__label">4 dates left for 2026</span>
-          <span class="sticky-cta__message">Inquiries are reviewed in the order received</span>
-        </div>
-        <a href="contact.html" class="btn-primary sticky-cta__btn">Reserve Your Dates →</a>
-      </div>
-    </div>
-  </div>
-
-  <script src="script.js"></script>
-</body>
-</html>

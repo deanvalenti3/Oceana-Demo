@@ -1,0 +1,12 @@
+  <!-- STICKY CTA BAR -->
+  <div class="sticky-cta" id="sticky-cta">
+    <div class="container">
+      <div class="sticky-cta__inner">
+        <div class="sticky-cta__text">
+          <span class="sticky-cta__label">{{ site.availabilityLabel }}</span>
+          <span class="sticky-cta__message">{{ site.availabilityNote }}</span>
+        </div>
+        <a href="{{ ctaHref | default("contact.html") }}" class="btn-primary sticky-cta__btn">Reserve Your Dates →</a>
+      </div>
+    </div>
+  </div>
